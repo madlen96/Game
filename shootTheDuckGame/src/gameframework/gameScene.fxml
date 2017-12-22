@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gameframework.GameController">
+    <children>
+        <SplitPane fx:id="splitPane" dividerPositions="0.30402010050251255" layoutX="220.0" layoutY="-6.0" orientation="VERTICAL" prefHeight="406.0" prefWidth="600.0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane maxHeight="140.0" minHeight="140.0" minWidth="0.0" prefHeight="139.0" prefWidth="598.0">
+                    <children>
+                        <GridPane prefHeight="196.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Text fx:id="gameOverText" strokeType="OUTSIDE" strokeWidth="0.0" text="GAME OVER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="gameOverInstruction" strokeType="OUTSIDE" strokeWidth="0.0" text="Press space or enter to restart." GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Text>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Shoots:" GridPane.valignment="TOP">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Text>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Killed:" GridPane.valignment="BOTTOM">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="shootsCount" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="killedCount" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Text>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Runaway:" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Text>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Score:" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="runawayCount" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="scoreCount" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Text>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                                      <Button fx:id="restartButton" mnemonicParsing="false" prefHeight="39.0" prefWidth="111.0" text="RESTART" />
+                                      <Button fx:id="exitButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="99.0" text="EXIT" />
+                           </children>
+                        </HBox>
+                            </children>
+                        </GridPane>
+                    </children>
+                </AnchorPane>
+                <Pane fx:id="canvasPane" prefHeight="250.0" prefWidth="602.0">
+                                        <children>
+                        <Canvas fx:id="canvas" height="252.0" width="200.0" />
+                    </children>
+                </Pane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
